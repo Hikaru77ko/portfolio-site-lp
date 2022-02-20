@@ -1,0 +1,241 @@
+$border: solid 1px #c8c8c8;
+
+* {
+    font-size: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 1.5rem;
+}
+section {
+    margin-top: 100px;
+}
+.wrapper {
+    max-width: 960px;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+/*------------------
+header
+-------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    height: 270px;
+    padding: 0 4%;
+    margin: 0 auto;
+    ul {
+        display: flex;
+        padding: 10px 0;
+        li {
+            margin-left: 30px;
+            font-size: 0.9rem;
+            a {
+                color: #24292e;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+            img {
+                width: 20px;
+            }
+        }
+    }
+}
+/*------------------
+main-visual
+--------------------*/
+.main-visual {
+    margin-top: 80px;
+    img {
+        width: 100%;
+        max-width: 1920px;
+        height: 420px;
+        object-fit: cover;
+    }
+}
+/*------------------
+about
+--------------------*/
+.about p {
+    margin-bottom: 30px;
+}
+/*-------------------
+works
+--------------------*/
+.works {
+    width: 100%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 0px;
+        li {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+    }
+}
+/*-------------------
+news
+--------------------*/
+.news dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: $border;
+    margin-bottom: 15px;
+    dt {
+        width: 20%;
+        border-bottom: $border;
+        padding: 15px;
+    }
+    dd {
+        width: 80%;
+        margin-left: 0px;
+        border-bottom: $border;
+        padding: 15px;
+    }
+}
+/*-------------------
+contact
+--------------------*/
+.contact dl {
+    display: flex;
+    flex-wrap: wrap;
+    dt {
+        width: 15%;
+    }
+    dd {
+        width: 85%;
+        margin-bottom: 10px;
+        input {
+            width: 100%;
+            padding: 10px;
+        }
+        textarea {
+            width: 100%;
+        }
+    }
+}
+.submit-btn {
+    text-align: center;
+    margin-top: 15px;
+    input {
+        width: 200px;
+        padding: 15px 0px;
+        background-color: #121213;
+        border: 1px solid #121213;
+        color: aliceblue;
+
+        &:hover {
+            color: #121213;
+            border-color: #121213;
+            background-color: rgb(247, 247, 247);
+        }
+    }
+}
+
+/*-------------------
+footer
+--------------------*/
+footer {
+    margin-top: 180px;
+    background-color: #24292e;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+
+    p {
+        font-size: 0.5rem;
+    }
+}
+
+/*-------------------
+レスポンシブ
+--------------------*/
+@media screen and (max-width: 600px) {
+    /*-------------------
+header
+--------------------*/
+    .header {
+        max-width: 100%;
+        margin-top: 30px;
+        height: auto;
+        flex-direction: column;
+        nav ul li {
+            margin-left: 20px;
+        }
+    }
+    /*-------------------
+main-visual
+--------------------*/
+    .main-visual {
+        margin-top: 30px;
+    }
+
+    /*-------------------
+works
+--------------------*/
+    .works ul {
+        flex-direction: column;
+        li {
+            width: 100%;
+        }
+    }
+
+    /*-------------------
+news
+--------------------*/
+    .news {
+        dl {
+            flex-direction: column;
+            dt {
+                width: 100%;
+                border: none;
+                padding-bottom: 0px;
+            }
+            dd {
+                width: 100%;
+                padding-top: 0px;
+            }
+        }
+    }
+    /*-------------------
+contact
+--------------------*/
+
+    .contact dl {
+        flex-direction: column;
+        dt {
+            width: 100%;
+        }
+        dd {
+            width: 100%;
+        }
+    }
+    /*-------------------
+footer
+--------------------*/
+
+    footer {
+        margin-top: 100px;
+    }
+}
